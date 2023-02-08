@@ -1,41 +1,51 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import logo from "./logo.png";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Checkout } from "./component/Checkout/Checkout";
+import { RequiredAuth } from "./component/RequiredAuth";
+import { Login } from "./pages/Auth/Login";
+import { SignUp } from "./pages/index";
+import {Home, Productlist , Cart , Wishlist , Singleproduct } from "./pages/index";
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
+      
+
+      <Routes>
+        <Route path="/Login" element={<Login />} />
+        <Route path="/SignUp" element={<SignUp />} />
+
+        <Route path="/" element={<Home/>} />
+        <Route path="/productlist" element={<Productlist />} />
+        <Route path="/Singleproduct/:productId" element={<Singleproduct/>}/>
+        <Route path="/Checkout" element={<Checkout />} />
+        <Route path="/Cart" element={
+          <RequiredAuth>
+            <Cart />
+         </RequiredAuth> 
+        } />
+
+        <Route path="/Wishlist" element={<RequiredAuth><Wishlist /></RequiredAuth>} />
+        
+
+    </Routes>
+      
+<ToastContainer 
+position="bottom-left"
+autoClose={3000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+// pauseOnFocusLoss
+draggable
+// pauseOnHover
+theme="light"
+/>   
+      
     </div>
   );
 }

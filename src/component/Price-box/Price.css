@@ -1,0 +1,94 @@
+
+.cart-image {
+    width: 150px;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.cart-title {
+    margin: 10px 0px 0px 0px;
+}
+
+.cart-author {
+    margin: 10px 0px 0px 0px;
+}
+
+.cart-price {
+    margin: 10px 0px 0px 0px;
+}
+
+.inc-quantity {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    height: 26px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.padding {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.totalpage {
+    box-shadow: 4px 3px 7px -5px;
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    width: 30%;
+    min-height: 300px;
+    margin: 10px;
+    background-color: var(--white-color);
+}
+
+.totalpage-h3 {
+    margin: 10px;
+    color: gray;
+}
+
+.s-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+}
+
+.color {
+    color: green;
+}
+
+.inc-btn {
+    border-radius: 25px;
+    width: 30px;
+    padding: -3px;
+    height: 30px;
+    border: 1px groove;
+    background-color: var(--white-color);
+}
+
+.qty {
+    border: 1px groove;
+    width: 45px;
+    height: 25px;
+    padding: 0px;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+.height {
+    height: 45px;
+}
+
+.sep-part {
+    border-top: 1px dashed;
+    border-bottom: 1px dashed;
+    margin: 10px 10px 0px 10px;
+}
+
+.inbold {
+    font-weight: bolder;
+    margin: 0px;
+}

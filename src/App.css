@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -48,4 +44,11 @@
   color: #d9d9d9;
   font-size: 1.2rem;
   margin: 1rem;
+}
+
+.toast-message {
+  font-size: 15px;
+  height: 20px;
+  width: 34vw;
+  /* padding: 30px 20px; */
 }

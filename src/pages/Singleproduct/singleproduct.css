@@ -1,0 +1,29 @@
+.Single-product{
+    display: flex;
+    margin-top: 70px;
+ 
+}
+.Single-image{
+        width: 250px;
+        padding: 20px;
+}
+.Single-item{
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 500px;
+}
+.singleitem-add{
+    border: 1px solid;
+    text-decoration: none;
+    width: 50%;
+    height: 39px;
+    margin-top: 10px;
+    font-size: 17px;
+    color: var(--white-color);
+    background-color: var(--btn-hover-color);
+}.singleitem-add:hover{
+    color: var(--secondary-color);
+    background-color: var(--white-color);
+}
