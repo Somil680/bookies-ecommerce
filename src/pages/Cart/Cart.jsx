@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Cart.css"
 import { background } from "../../Images/index"
-import { useCart } from "../../context";
+import { useCart, useStore } from "../../context";
 import { Navbar , Footer, Price } from "../../component";
 import { CartmanagementView } from "./CartmanagementVeiw";
 import { Link, Navigate } from "react-router-dom";
@@ -9,6 +9,9 @@ import { useAuth } from "../../context/AuthContext";
 
 function Cart() {
   const { auth } = useAuth()
+  const { storeState } = useStore()
+  const { storeItem } = storeState
+  console.log("Cart" , storeItem)
  
 const {cartState , dispatch} = useCart()
   const { cart} = cartState
@@ -24,7 +27,7 @@ const {cartState , dispatch} = useCart()
     dispatch({type : "GET-ORIGINAL-PRICE"})
     dispatch({ type: "GET-DISCOUNTED-PRICE" })
     dispatch({type : "GET-ALL-QTY-INCART"})
-  } , [cart])
+  },[cart])
  
 return <>
   <Navbar />

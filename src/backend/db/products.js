@@ -38,7 +38,7 @@ export const products = [
     discount: "40%",
     intprice: "349",
     categoryName: "Non-Friction",
-    image:"https://cloudfront.penguin.co.in/wp-content/uploads/2023/01/9780670097135.jpg",
+    image:"https://cloudfront.penguin.co.in/wp-content/uploads/2023/02/9780670097135.jpg",
   },
   {
    _id: uuid(),

@@ -135,8 +135,7 @@ try {
         }} />
             </fieldset>
   <fieldset className="Fieldset">
-            <p className="margin-0">Confirm Password</p>      
-
+        <p className="margin-0">Confirm Password</p>      
         <input className="input-field" type="text" placeholder="Password" onChange={(e) => {
             e.preventDefault()
             setPassword(e.target.value)

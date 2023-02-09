@@ -13,7 +13,7 @@ makeServer();
 const container = document.getElementById("root")
 const root = createRoot(container);
 root.render(
-  <React.StrictMode>
+
     <Router>
       <AuthProvider>
         <StoreProvider>
@@ -27,7 +27,7 @@ root.render(
         </StoreProvider>
         </AuthProvider>
     </Router>
-  </React.StrictMode>
+
 
 );
 

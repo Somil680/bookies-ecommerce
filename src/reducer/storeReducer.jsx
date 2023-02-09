@@ -1,8 +1,5 @@
-import React from 'react';
-
-
 function storeReducer(storeState, storeAction) {
-
+  console.log("storeReducer" , storeState.storeItem)
     switch (storeAction.type) {
         case "Fetch-products":
             return {...storeState,
