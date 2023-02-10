@@ -107,13 +107,11 @@ border-top: 1px dashed;
          bottom: 0px;
 }
 .checkout-btn{
-width: 40%;
-    text-decoration: none;
+    padding: 7px;
+    margin: 10px;
     background-color: var(--third-color);
     color: var(--white-color);
-    padding: 10px;
-    margin: 10px;
-    font-size: 15px;
+    border-radius: 5px;
 }
 .check-out-btn{
 display: flex;

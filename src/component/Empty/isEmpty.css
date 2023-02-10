@@ -1,0 +1,12 @@
+.isEmpty-image{
+    display: block;
+    height: 460px;
+    width: 60%;
+    margin-top: 50px;
+}
+.isEmpty-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}

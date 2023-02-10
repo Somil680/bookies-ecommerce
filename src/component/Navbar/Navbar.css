@@ -11,16 +11,13 @@
     width: 100%;
     top: 0px;
     z-index: 1;
-box-shadow: 4px 3px 7px -5px;
-  
-   
+    box-shadow: 4px 3px 7px -5px;
 }
 .icon{
     width: 20px;
     height: 20px;
     font-size: x-large;
 }
-
 .d-flex{
     display: flex;
     justify-content: space-between;
@@ -39,7 +36,7 @@ box-shadow: 4px 3px 7px -5px;
     text-decoration: none;
 }
 .cart-num{
-text-decoration: none;
+    text-decoration: none;
     position: relative;
     right: 10px;
     bottom: 10px;
@@ -51,9 +48,8 @@ text-decoration: none;
     color: var(--white-color);
     background-color: var(--third-color);
 }
-
 .nav-log-btn{
-border: none;
+    border: none;
     background-color: var(--third-color);
     padding: 10px;
     border-radius: 10px;
@@ -61,12 +57,14 @@ border: none;
     font-size: 17px;  
 }
 .logo{
-width: 170px;
-
+    width: 170px;
 }
 .nav-cart-wish-icon{
-        display: flex;
-        align-items: center;
+    display: flex;
+    align-items: center;
 }
-
-
+@media only screen and (max-width:400px) {
+.body-container {
+    background-color:white;
+}
+}

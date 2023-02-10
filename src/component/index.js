@@ -3,3 +3,4 @@ export { Filter } from "../component/Filtter/Filter";
 export { Footer } from "./Footer/footer"
 export { Price } from "./Price-box/Price"
 export { Checkout } from "./Checkout/Checkout"
+export {IsEmpty} from "./Empty/isEmpty"

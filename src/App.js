@@ -7,31 +7,33 @@ import { RequiredAuth } from "./component/RequiredAuth";
 import { Login } from "./pages/Auth/Login";
 import { SignUp } from "./pages/index";
 import {Home, Productlist , Cart , Wishlist , Singleproduct } from "./pages/index";
+import { useCart } from "./context";
+import { IsEmpty } from "./component";
+import { useWishlist } from "./context";
 
 function App() {
-
+  const { cartState } = useCart()
+  const { cart } = cartState
+  const { wishState } = useWishlist()
+    const {wishlistItem} = wishState
   return (
     <div className="App">
-      
-
-      <Routes>
-        <Route path="/Login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} />
-
-        <Route path="/" element={<Home/>} />
-        <Route path="/productlist" element={<Productlist />} />
-        <Route path="/Singleproduct/:productId" element={<Singleproduct/>}/>
-        <Route path="/Checkout" element={<Checkout />} />
-        <Route path="/Cart" element={
-          <RequiredAuth>
-            <Cart />
-         </RequiredAuth> 
-        } />
-
-        <Route path="/Wishlist" element={<RequiredAuth><Wishlist /></RequiredAuth>} />
-        
-
-    </Routes>
+<Routes>
+    <Route path="/Login" element={<Login />} />
+    <Route path="/SignUp" element={<SignUp />} />
+    <Route path="/" element={<Home />} />
+    <Route path="/productlist" element={<Productlist />} />
+    <Route path="/Singleproduct/:productId" element={<Singleproduct/>}/>
+    <Route path="/Checkout" element={<Checkout />} />
+    <Route path="/Cart" element={
+      <RequiredAuth>
+        {cart.length ===0 ? < IsEmpty/> :<Cart />} 
+      </RequiredAuth> }/>
+    <Route path="/Wishlist" element={
+      <RequiredAuth>
+        {wishlistItem.length === 0 ? <IsEmpty/>:<Wishlist />}
+      </RequiredAuth>}/>
+</Routes>
       
 <ToastContainer 
 position="bottom-left"
@@ -45,9 +47,7 @@ draggable
 // pauseOnHover
 theme="light"
 />   
-      
-    </div>
-  );
+</div>
+);
 }
-
 export default App;
