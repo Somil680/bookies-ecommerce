@@ -101,14 +101,14 @@ display: flex;
     /* display: grid; */
         /* grid-template-columns: auto auto ; */
     flex-direction: column;
-  
+  margin-top: 75px;
     align-items: center;
 }
 
 .display-flex {
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
+    margin-top: -11px;
         width: 250px;
 }
 .filter-bar {
