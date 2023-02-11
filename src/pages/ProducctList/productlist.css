@@ -112,8 +112,11 @@ display: flex;
         width: 250px;
 }
 .filter-bar {
-    position: static;
-    
+
+    width: 323px;
+        background-color: white;
+        position: fixed;
+        z-index: 1;
     
 }
 }

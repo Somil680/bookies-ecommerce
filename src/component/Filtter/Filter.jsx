@@ -7,15 +7,15 @@ const { state, dispatchSort } = useSort()
 const { sortby, Categoryfilter, Discountfilter } =state
 
 return <>
-    <div className="fillter-component">
-        <h2>Filters</h2>
 
-<div>
+<div className="topname">
+    <h2 className="margin0">Filters</h2>
     <p className="clear-btn" onClick={() => dispatchSort({ type: "CLEAR-FILTER" })}>Clear All</p>
 </div>
+    <div className="fillter-component">
 
 <div className="sort-button">
-<select name="Sort " id="price-sort" value={state.sortby} onChange={(e) => dispatchSort({ type: "Sortby", payload: e.target.value })} >
+    <select name="Sort " id="price-sort" value={state.sortby} onChange={(e) => dispatchSort({ type: "Sortby", payload: e.target.value })} >
         <option id="option" checked value="/">Default</option>
         <option id="option"  value="Low-to-High">Low to High</option>
         <option id="option"  value="High-to-Low">High to Low</option>
