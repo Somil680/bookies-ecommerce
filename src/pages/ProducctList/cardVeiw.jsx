@@ -18,7 +18,7 @@ const { _id, image, title, author, price, categoryName, intprice, discount } = p
 const { cartState , dispatch } = useCart()
 const { wishState, wishDispatch } = useWishlist()
 const Navigate = useNavigate()
-    
+
     
 
 const isInCart = findInArray(_id, cartState.cart)
