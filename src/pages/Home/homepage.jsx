@@ -93,24 +93,24 @@ return (
 
     </div>
 
-        {/* <div className="container-home">
+    <div className="book-group-two">   
+        <div className="container-home">
           <img src={gautamAdani} alt="" className="books" />
           <h4 className="margin0">Gautam Adani</h4>
           <p className="margin0">R.N. Bhaskar</p>
-        </div> */}
+        </div>
 
-    <div className="book-group-two">   
         <div className="container-home">
           <img src={iAmonir} alt="" className="books" />
           <h4 className="margin0">I An Onir</h4>
           <p className="margin0">Irene Dhar Malik</p>
         </div>
         
-        <div className="container-home">
+        {/* <div className="container-home">
           <img src={life} alt="" className="books" />
           <h4 className="margin0">Life Amazing Secrets</h4>
           <p className="margin0">Gaur Gopal Das</p>
-        </div>
+        </div> */}
     </div>
         
 
