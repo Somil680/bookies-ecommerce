@@ -40,7 +40,7 @@ const loginHandler = async () => {
 }
 
 return<>
-<div className="body-container">
+<div className="login-body-container">
     <nav  className="d-flex">
         <div className="padding-20">
           <Link to="/"><img src={logo} alt="" className="logo" /></Link>

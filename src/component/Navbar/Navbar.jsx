@@ -2,15 +2,14 @@ import "./Navbar.css"
 import React  from "react";
 import { Link } from "react-router-dom"
 import { BsCart3 , BsHeart} from "react-icons/bs";
+import {FaBars} from "react-icons/fa";
 import { useCart, useWishlist } from "../../context";
 import { logo } from "../../Images";
 import { useAuth } from "../../context/AuthContext";
 function Navbar() {
   const { auth , setAuth } = useAuth()
   const { isAuth } = auth
-  {isAuth ? console.log(isAuth) : console.log(isAuth)}
-  console.log(auth.userName)
-const { cartState } = useCart()
+  const { cartState } = useCart()
   const { cart } = cartState
   const { wishState } = useWishlist()
   const { wishlistItem } = wishState
@@ -18,7 +17,7 @@ const { cartState } = useCart()
   return (
 <div className="body-container">
   <nav  className="d-flex">
-      <div className="padding-20">
+      <div className="">
       <Link to="/">
         <img src={logo} alt="" className="logo" />
       </Link>
@@ -41,15 +40,20 @@ const { cartState } = useCart()
         </div>
       </Link>
     <div>
-      {isAuth ? <h3 className="padding">Hi ,{auth.userName}</h3> :
-          <h3 className="padding">Hi,</h3>}
+      {isAuth ? <h3 className="padding hide">Hi ,{auth.userName}</h3> :
+          <h3 className="padding hide">Hi,</h3>}
     </div>
          
     <div>
       <Link to="/Login">
-        {isAuth ?  <button className="nav-log-btn"  onClick={()=> setAuth(auth => ({token:"",isAuth:false,userName:""}))}>Logout</button> : <button className="nav-log-btn" >Login</button>}
+        {isAuth ?  <button className="nav-log-btn hide"  onClick={()=> setAuth(auth => ({token:"",isAuth:false,userName:""}))}>Logout</button> : <button className="nav-log-btn" >Login</button>}
       </Link>
     </div>
+
+    <div>
+        <FaBars className="icon padding"/>
+          </div>      
+          
   
 </div>
 </nav>
