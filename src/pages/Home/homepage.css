@@ -79,6 +79,9 @@
     color: black;
     cursor: pointer;
 }
+.text-deco{
+    text-decoration: none;
+}
 
 @media only screen and (max-width:400px){
 .banner {

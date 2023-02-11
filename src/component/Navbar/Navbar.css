@@ -67,7 +67,7 @@
 .body-container {
     background-color : var(--navbar-color);
     position: fixed;
-    width: 40%;
+    width: 96%;
     height: 47px;
     top: 0px;
     z-index: 1;

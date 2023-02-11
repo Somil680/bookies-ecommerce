@@ -20,16 +20,16 @@ return (
    <div className="book-group-one">
             
     <div className="container-home">
-        <Link to="/productlist">
+        <Link to="/productlist" className="text-deco">
         <img src={multibagger} alt="" className="books" />
-        <h4 className="margin0">Multibegger Stock</h4>
+        <h4 className="margin0 ">Multibegger Stock</h4>
         <p className="margin0">Prasenjit Paul</p>
         </Link>
     </div>
         
 
     <div className="container-home">
-        <Link to="/productlist">
+        <Link to="/productlist" className="text-deco">
         <img src={gardenUp} alt="" className="books" />
         <h4 className="margin0">Garden UP</h4>
         <p className="margin0">Dr Ekta Chaudhary</p>
@@ -46,7 +46,7 @@ return (
 
       <div className="book-group-one">    
   <div className="container-home">
-      <Link to="/productlist">
+      <Link to="/productlist" className="text-deco">
       <img src={thecompany} alt="" className="books" />
       <h4 className="margin0">The Company we Keep</h4>
       <p className="margin0">Divya Khanna</p>
@@ -54,7 +54,7 @@ return (
   </div>
         
   <div className="container-home">
-      <Link to="/productlist">
+      <Link to="/productlist" className="text-deco">
       <img src={book1} alt="" className="books" />
       <h4 className="margin0">Build Don't Talk</h4>
       <p className="margin0">Raj Shamani</p>
