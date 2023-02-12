@@ -86,10 +86,13 @@ padding-right: 10px;
 padding-left: 10px;
 text-decoration: line-through
 }
-
+@media only screen and (min-width:400px) {
 .wish-icon{
-    position: absolute;
+position: relative;
     margin: 10px;
+    top: -111px;
+    left: -9px;
+}
 }
 @media only screen and (max-width:400px) {
 .product-grid {

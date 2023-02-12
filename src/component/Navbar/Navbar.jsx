@@ -51,8 +51,8 @@ function Navbar() {
     </div>
 
     <div>
-        <FaBars className="icon padding"/>
-          </div>      
+        <FaBars className="icon padding Barsshow"/>
+    </div>      
           
   
 </div>
