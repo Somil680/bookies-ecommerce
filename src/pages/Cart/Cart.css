@@ -115,3 +115,32 @@ display: flex;
     align-items: center;
     justify-content: center;
 }
+@media only screen and (max-width:400px){
+    .PAGE-CONTAINER {
+            width: 100%;
+            height: 100%;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+.product-container {
+    width: 96%;
+    margin-left: 10px;
+    overflow-y: scroll;
+    height: 404px;
+    box-shadow: 4px 3px 7px -5px;
+    background-color: var(--white-color);
+}
+.totalpage {
+     box-shadow: 4px 3px 7px -5px;
+    width: 95%;
+    min-height: 300px;
+    margin: 10px;
+    background-color: var(--white-color);
+}
+.desc-container {
+    margin-left: 17px;
+    margin-top: 20px;
+    width: 62%;
+}
+}
