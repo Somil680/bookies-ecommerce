@@ -11,10 +11,10 @@ function Checkout() {
     console.log(cart)
     
 return <>
-    <Navbar/>
+<Navbar/>
     <div className="Checkout-box">
         <div className="checkout-cart-data">
-            <h3 className='totalpage-h3 '>Product Deatail</h3><hr />
+        <h3 className='totalpage-h3 '>Product Deatail</h3><hr />
 {cart.map((item) => (
     <div key={item._id}>
         <div className='Checkout-T-Q'>
@@ -27,12 +27,13 @@ return <>
             </div>
         </div>
     </div>))}</div>
-        <div className="Checkout-price-data">
-            <Price />
-
-            <Link className='checkout-btn'>Check Out</Link>
- </div>     
+        
+<div className="Checkout-price-data">
+        <Price />
+        <Link className='checkout-btn'>Check Out</Link>
+</div>     
     </div>
+    
     <hr />
     <div className="Checkout-Address">
         <h3>Address</h3>

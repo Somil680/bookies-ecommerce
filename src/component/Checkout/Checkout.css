@@ -20,3 +20,25 @@
 .checkout-cart-data{
     width: 50%;
 }
+
+@media only screen and (max-width:400px) {
+.Checkout-box {
+    margin-top: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.checkout-cart-data {
+width: 90%;
+margin-left: 10px;
+}
+.checkout-btn {
+    padding: 7px;
+    margin: 10px;
+    background-color: var(--third-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    text-decoration: none;
+    /* margin-bottom: 46px; */
+}
+}
