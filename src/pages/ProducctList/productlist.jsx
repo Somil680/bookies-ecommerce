@@ -31,8 +31,11 @@ function Productlist() {
   <div className="product-grid">{
    discountdata.map((item) => <CartVeiw products={item} key={item._id} />)
 }</div>
-</div>
+    </div>
+    <div className="productlist-footer">
+
 <Footer />
+    </div>
 
 </div>
 }
