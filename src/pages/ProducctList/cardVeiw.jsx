@@ -53,11 +53,15 @@ const isInWishlist = findInArray(_id, wishState.wishlistItem);
     
 
 return <>
-<div key={_id} className="item-grid" >         
-{isInWishlist ?
-<BsHeartFill size="1.5rem" className="wish-icon" onClick={() => wishDispatch({type : "REMOVE-FROM-WISHLIST" , payload : _id})} /> : <BsHeart size="1.5rem" className="wish-icon" onClick={() => wishHandler(_id, products)} />} 
-            
+    <div key={_id} className="item-grid" >   
+
 <div className="item-image-div">
+
+<div className="wish-heart">       
+    {isInWishlist ?
+<BsHeartFill size="1.5rem" className="wish-icon" onClick={() => wishDispatch({type : "REMOVE-FROM-WISHLIST" , payload : _id})} /> : <BsHeart size="1.5rem" className="wish-icon" onClick={() => wishHandler(_id, products)} />} 
+</div>   
+        
 <Link to={`/Singleproduct/${_id}`}><img src={image} alt="" className="item-image" /></Link>
 </div> 
             
