@@ -3,37 +3,45 @@ import "./singleproduct.css"
 import { useCart , useWishlist } from "../../context";
 import { findInArray } from "../../utensiles/find";
 import {   useNavigate } from "react-router-dom";
-
+import { useAuth } from "../../context/AuthContext";
+import { toast } from "react-toastify";
 function SingleproductView({ products , productId }) {
-
+const { auth } = useAuth()
+const {isAuth} = auth
 const { cartState , dispatch } = useCart()
 const { wishState, wishDispatch } = useWishlist()
 const Navigate = useNavigate()
 const isInCart = findInArray(productId, cartState.cart)
     const cartHandler = (id, products) => {
-        if (isInCart) {
-            Navigate("/Cart")
-            
+        if (isAuth) {
+            if (isInCart) {
+                Navigate("/Cart")
+            } else {
+                dispatch({
+                    type: "Add-to-cart",
+                    payload: products
+                })
+                toast.success('Added To Cart!');
+            }
         } else {
-            dispatch({
-                type: "Add-to-cart",
-                payload: products
-            })
-            // toast.success('Added To Cart!');
-            console.log("add to cart")
-
-        }  
+            toast.warn("Please Login yourself")
+        }
     }
 
 const isInWishlist = findInArray(productId, wishState.wishlistItem);
     const wishHandler = (id, products) => {
-    if (isInWishlist) {
-        Navigate("/Wishlist")
-    } else {
-        wishDispatch({ type: "Add-to-Wishlist", payload: products})
-        console.log("add to wishlist")
+        if (isAuth) { 
+        if (isInWishlist) {
+            Navigate("/Wishlist")
+        } else {
+            wishDispatch({ type: "Add-to-Wishlist", payload: products })
+            toast.success("Add to Wishlist")
        
-    }}
+        }
+        } else {
+            toast.warn("Please Login yourself")
+    }
+}
 
 return <>
 {products.map((products , productId) => (
