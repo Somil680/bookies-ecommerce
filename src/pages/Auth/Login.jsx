@@ -16,26 +16,28 @@ const [password, setPassword] = useState("");
 const {auth:{token,isAuth},setAuth } = useAuth();
 
 const loginHandler = async () => {
- const body = {
+ const body = [{
  email : email,
  password : password,
- }
-
+ }]
  try {
-     const response = await axios.post("/api/auth/login", body)
-     console.log(response.data.foundUser.firstName)
-     if(response.data.encodedToken){
+     //  const response = await axios.post("/api/auth/login", body)
+    //   userName: logindata.body.firstName 
+     let logindata = localStorage.getItem("token")
+    // console.log(logindata.firstName)
+    // console.log(logindata)
+
+     if(logindata = body){
     navigate("/")
-         setAuth(auth => ({ ...auth, token: response.data.encodedToken, isAuth: true, userName: response.data.foundUser.firstName }))
-         console.log("login")
+         setAuth(auth => ({ ...auth,  isAuth: true , userName: logindata.firstName }))
+        //  console.log("login")
     toast.success("Login successfully")
      }else {
     toast.warn("Invalid username && Password")
-             console.log("unemail")
+            //  console.log(body)
      }
  } catch (error) {
   toast.error("Error while logging")
-         console.log("errpr while logging")
  }
 }
 

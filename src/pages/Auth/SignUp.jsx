@@ -15,17 +15,17 @@ const [password , setPassword] = useState()
 const Navigate = useNavigate()
 
 const signupHandler = async () => {
-const body = {
+const body =[{
   email: email,
   password: password,
   firstName: firstName,
   lastName: lastName,
-}
+}]
 try {
- const response = await axios.post("/api/auth/signup", body)
- localStorage.setItem("token", response.data.encodedToken);
+//  const response = await axios.post("/api/auth/signup", body)
+ localStorage.setItem("token", JSON.stringify(body));
     setTimeout(() => {
-       console.log( response.data)
+       console.log( body)
   Navigate("/login")
     }, 1000);
 
