@@ -53,7 +53,7 @@ return<>
 <div className="Login-page">
             
 <h3 className="margin-0 , margin">Welcome to BOOKIE`S </h3>
-<h3 className="margin-0">LogIn account.</h3>
+<h3 className="margin-0">Login account</h3>
 
 <div className="google-btn">
     <div className="google-icon-wrapper">
@@ -85,7 +85,7 @@ return<>
     <button className="login-submit-btn" type="submit"
         onClick={() => {
                   toast.success("Login successfully")
-                  setAuth(auth => ({token:"",isAuth:true,userName:"Guest"}))}}>
+            setAuth(auth => ({token:"",isAuth:true,userName:"Guest"}))}}>
         Login As Guest
     </button>
 </Link>

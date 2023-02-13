@@ -1,6 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
 /* NAVBAR */
 .login-body-container {
-    background-color: var(--navbar-color);
+    background-color: var(--white-color);
     position: fixed;
     width: 100%;
     top: 0px;
@@ -77,14 +78,11 @@ background-color: white;
         letter-spacing: 0.2px;
         font-family: "Roboto";
     }
+.login-submit-btn{
+background-color: black;
+padding: 10px ;
+margin: 10px;
+color: white;
+}
+ 
 
-    &:hover {
-        /* box-shadow: 0 0 6px $google-blue; */
-    }
-
-    &:active {
-        /* background: $button-active-blue; */
-    }
-
-
-@import url(https://fonts.googleapis.com/css?family=Roboto:500);
