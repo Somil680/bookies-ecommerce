@@ -66,14 +66,6 @@
     align-items: center;
     justify-content: space-between;
 }
-.explore-button{
- padding: 15px;
-    background-color: black;
-    margin: 10px;
-    color: white;
-    font-size: 20px;
-    border-radius: 4px;
-}
 .explore-button:hover{
     background-color: white;
     color: black;
@@ -81,6 +73,29 @@
 }
 .text-deco{
     text-decoration: none;
+}
+@media only screen and (min-width:400px){
+    .book-group-one {
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+    }
+    .book-group-two {
+        display: flex;
+    flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        }
+    .explore-button{
+     padding: 15px;
+        background-color: black;
+        margin: 10px;
+        color: white;
+        font-size: 20px;
+        border-radius: 4px;
+            width: 161px;
+    }
 }
 
 @media only screen and (max-width:400px){

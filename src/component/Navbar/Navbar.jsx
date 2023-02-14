@@ -26,16 +26,17 @@ function Navbar() {
 
         <Link to="/Cart " className="text">
         <div className="nav-cart-wish-icon">
-              <BsCart3 className="icon padding"/>
-              {cart.length === 0 ? <p></p> :  <p className="cart-num" >{cart.length} </p> }
-          
+              <BsCart3 className="icon padding" />
+           
+              {cart.length === 0  ? <p></p> : isAuth && <p className="cart-num" >{cart.length} </p> }
+         
         </div>
       </Link>
         
       <Link to="/Wishlist" className="text">
         <div className="nav-cart-wish-icon">
               <BsHeart className="icon padding"/>
-              {wishlistItem.length === 0 ? <p></p> : <p className="cart-num" >{wishlistItem.length}</p>}   
+              {wishlistItem.length === 0 ? <p></p> : isAuth && <p className="cart-num" >{wishlistItem.length}</p>}   
         
         </div>
       </Link>

@@ -43,11 +43,12 @@ const isInWishlist = findInArray(_id, wishState.wishlistItem);
         }
     }     
 return <>
-<div key={_id} className="item-grid" >       
-{isInWishlist ?
-<BsHeartFill size="1.5rem" className="wish-icon" onClick={() => wishDispatch({type :  "REMOVE-FROM-WISHLIST" , payload : _id})} /> : <BsHeart size="1.5rem" className="wish-icon" onClick={() => wishHandler(_id, products)} />} 
-            
+    <div key={_id} className="item-grid" >  
+        
 <div className="item-image-div">
+{isInWishlist ?
+<BsHeartFill size="1.5rem" className="wishitem-icon" onClick={() => wishDispatch({type :  "REMOVE-FROM-WISHLIST" , payload : _id})} /> : <BsHeart size="1.5rem" className="wishitem-icon" onClick={() => wishHandler(_id, products)} />} 
+            
     <img src={image} alt="" className="item-image" />
 </div> 
             

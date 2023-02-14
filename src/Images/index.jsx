@@ -1,3 +1,4 @@
+import Error404page from "./Assets/error404.png"
 import signup_background from "./Assets/signup-background.jpg"
 import Login_img from "./Assets/login.png"
 import background from './Assets/background.png'
@@ -21,6 +22,6 @@ const zakir = require('../Images/Assets/zakir.png');
 
 export {
      wishlist , wishlist_fill,doglapan, audiobook12, zakir, banner2, banner1, book1,
-    gardenUp, gautamAdani, multibagger, iAmonir, sub_banner1, sub_banner2, thecompany, life, logo ,background , Login_img , signup_background
+    gardenUp, gautamAdani, multibagger, iAmonir, sub_banner1, sub_banner2, thecompany, life, logo ,background , Login_img , signup_background , Error404page
     
 }

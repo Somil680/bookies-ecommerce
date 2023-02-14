@@ -10,6 +10,7 @@ import {Home, Productlist , Cart , Wishlist , Singleproduct } from "./pages/inde
 import { useCart } from "./context";
 import { IsEmpty } from "./component";
 import { useWishlist } from "./context";
+import { Error404 } from "./component/Error404/Error404";
 
 function App() {
   const { cartState } = useCart()
@@ -25,6 +26,7 @@ function App() {
     <Route path="/productlist" element={<Productlist />} />
     <Route path="/Singleproduct/:productId" element={<Singleproduct/>}/>
     <Route path="/Checkout" element={<Checkout />} />
+    <Route path="*" element={<Error404/>} />
     <Route path="/Cart" element={
       <RequiredAuth>
         {cart.length ===0 ? < IsEmpty/> :<Cart />} 
