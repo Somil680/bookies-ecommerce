@@ -1,21 +1,21 @@
-import React from 'react';
+// import React from 'react';
 
-const GetLocalStorageCartData = ()=> {
-    let LocalCartData = localStorage.getItem("BookiesCart")
-    if (LocalCartData === []) {
-        console.log(LocalCartData)
-        console.log(JSON.parse(LocalCartData))
-        return [];
+// const GetLocalStorageCartData = ()=> {
+//     let LocalCartData = localStorage.getItem("BookiesCart")
+//     if (LocalCartData === []) {
+//         console.log(LocalCartData)
+//         console.log(JSON.parse(LocalCartData))
+//         return [];
         
-    } else {
-        return JSON.parse(LocalCartData);
-    }
-}
+//     } else {
+//         return JSON.parse(LocalCartData);
+//     }
+// }
 
 const initalState = {
     Totalprice: 0,
-    // cart: [],
-    cart: GetLocalStorageCartData(),
+    cart: [],
+    // cart: GetLocalStorageCartData(),
     AfterDiscounted_Price : null,
     CARTQty : null
 }

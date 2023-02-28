@@ -1,17 +1,17 @@
-import React from 'react';
+// import React from 'react';
 
-const GetLocalWishData = () => {
-    let LocalWishData = localStorage.getItem("BookiesWish")
-    if (LocalWishData === []) {
-        return [];
-    } else {
-        return JSON.parse(LocalWishData)
-    }
-}
+// const GetLocalWishData = () => {
+//     let LocalWishData = localStorage.getItem("BookiesWish")
+//     if (LocalWishData === []) {
+//         return [];
+//     } else {
+//         return JSON.parse(LocalWishData)
+//     }
+// }
 
 const initalWishlist = {
-    //  wishlistItem : []
-     wishlistItem : GetLocalWishData()
+     wishlistItem : []
+    //  wishlistItem : GetLocalWishData()
 }
 
 function wishlistReducer(wishState, wishAction) {

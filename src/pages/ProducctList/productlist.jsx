@@ -16,7 +16,6 @@ function Productlist() {
   const { state } = useSort()
   const { storeState } = useStore()
   const {storeItem} = storeState
-  console.log("productlist",storeItem)
   const defaultdata = [...storeState.storeItem]
   const sorteddata = getsortdata([...defaultdata], state.sortby)
   const categorydata = categoryFilter([...sorteddata], state.Categoryfilter)

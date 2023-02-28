@@ -16,7 +16,8 @@ function App() {
   const { cartState } = useCart()
   const { cart } = cartState
   const { wishState } = useWishlist()
-    const {wishlistItem} = wishState
+  const { wishlistItem } = wishState
+
   return (
     <div className="App">
 <Routes>
